@@ -30,6 +30,10 @@ const BookShema = new Schema({
         type: String,
         required: true
     },
+    fileBook: {
+        type: String,
+        required: true
+    }
 });
 
 export default mongoose.model('Express', BookShema)
