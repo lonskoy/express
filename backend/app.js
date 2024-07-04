@@ -18,6 +18,7 @@ import { updateBook } from "./api/updateBook.js";
 // Подключение Middleware
 import { uploadFile } from "./middleware/uploadFile.js";
 
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -37,7 +38,7 @@ router.post("/user/login", async (req, res) => {
   res.status(200).json(login);
 });
 
-router.post("/books",uploadFile, newBook); // создать новую книгу
+router.post("/books", uploadFile, newBook); // создать новую книгу
 
 router.get("/books", allBooks); // получить все книги
 
