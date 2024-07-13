@@ -4,7 +4,7 @@ import Book from '../models/books.model.js'
 export  const newBook = async(req, res) => {
     const { title, description, authors, favorite, fileCover, fileName, fileBook } = req.body;
 
-    if (!title || !description || !authors || !fileCover || !fileName || fileBook) {  // Валидация данных
+    if (!title || !description || !authors || !fileCover || !fileName || !fileBook) {  // Валидация данных
         return res.status(400).json({ error: 'Все поля должны быть заполнены' });
     }
 

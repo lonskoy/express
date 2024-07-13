@@ -26,7 +26,7 @@ export function uploadFile(req, res, next) {
       return res.status(500).send('Ошибка загрузки файла!');
     }
 
-    const { fileBook } = req.body;
+    const { fileBook } = req.file;
 
     if (!fileBook) {
       return res.status(400).send('Путь к файлу указан не верно!');
